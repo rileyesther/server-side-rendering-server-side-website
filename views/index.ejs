@@ -1,12 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css">
     <title>Document</title>
 </head>
 <body>
-    <h1>hello</h1>
+    <header>
+        <nav>
+            <img id="logo" src="/assets/02-funda-Blue.png" alt="Funda logo">
+            <ul>
+                <li><a href="#">Bewaarde huizen</a></li>
+                <li><a href="#">Mijn huis</a></li>
+                <li><a href="#">Profiel</a></li>
+            </ul>
+        </nav>
+       
+        <div class="breadcrumb-trail">
+            <span>Home</span>  <span>Bewaarde huizen</span>
+        </div>
+       
+        <div id="orange-box">
+            <div id="text-inside-box">Hier vindt u al uw bewaarde huizen</div>
+            <div id="additional-text">
+                <p>Op deze pagina vind u alle huizen die heeft bewaard voor later.</p>
+               <p> Mocht u speciefieker naar uw huizen willen kijken , maak dan gebruik van onze zoek bar!</p>
+            </div>
+            <section class="search-section">
+                <input type="text" id="city-search" class="search-bar" placeholder="Plaats, buurt, adres, etc.">
+                <input type="text" id="min-price-search" class="search-bar" placeholder="Van $">
+                <input type="text" id="max-price-search" class="search-bar" placeholder="Tot geen maximum">
+                <button class="search-button">Zoek</button>
+            </section>
+       <img id="heart" src="/assets/heart-house.png" alt="fundahh">
+        </div>
+       
     
+    </header>
+
+    
+
+
+    <div class="house-grid"> <!-- Use grid layout for houses -->
+        <% houses.forEach(function(house) { %>
+            <article>
+                <img class="house-image" src="https://fdnd-agency.directus.app/assets/<%= house.poster_image %>" alt="<%= house.street %>">
+                <div class="house-info">
+                    <div class="house-heading">
+                        <h2><%= house.street %></h2>
+                        <h2><%= house.house_nr %></h2>
+                    </div>
+                    <div class="house-location">
+                        <p><%= house.postal_code %></p>
+                        <p><%= house.city %></p>
+                    </div>
+                    <p class="house-price">€<%= house.price %></p> 
+                    <div class="house-additional-information">
+                        <div>
+                            <p><%= house.m2 %></p>
+                            <img id="m2" src="/assets/fundam2.png" alt="fundam2">
+                        </div>
+                        <div>
+                            <p><%= house.rooms %></p>
+                            <img id="bed" src="/assets/fundabed.png" alt="fundabed">
+                        </div>
+                    </div>
+                </div>
+            </article>
+        <% }) %>
+    </div>
+
+    <script src="/scripts/script.js"></script>
 </body>
+
+
+
 </html>

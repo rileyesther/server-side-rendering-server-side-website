@@ -1,0 +1,259 @@
+@font-face {
+    font-family: "ProximaNova";
+    src: url(../assets/Fonts/ProximaNova-Regular_2607783814[2260].otf);
+}
+
+body {
+    font-family: ProximaNova, sans-serif;
+    background-color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: orange;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3.5em;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+}
+
+li {
+    margin: 1em;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+#logo {
+    max-width: 10em;
+    margin-left: 2em;
+}
+
+.house-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px; /* Set the gap between grid items */
+    justify-items: center; /* Center items horizontally */
+    align-items: left; /* Center items vertically */
+    max-width: 1200px; /* Adjust maximum width as needed */
+    margin: 0 auto; /* Auto margin to horizontally center the container */
+    margin-top: 150px; /* Adjust margin-top to accommodate the size of the square */
+    margin-left: 55px;
+    margin-right: 30em;
+}
+
+.article {
+    margin-top: 0; /* Remove top margin for consistent spacing */
+}
+
+.breadcrumb-trail {
+    margin: 20px 0;
+    text-align: center;
+    margin-right: 1000px;
+}
+
+.breadcrumb-trail span {
+    color: #333; /* Adjust color as needed */
+}
+
+.breadcrumb-trail span + span:before {
+    content: " > ";
+    margin: 0 5px;
+}
+
+#orange-box {
+    width: 1200px; /* Adjust width as needed */
+    height: 300px; /* Adjust height as needed */
+    background-color: orange;
+    border-radius: 20px; /* Adjust border radius to make corners round */
+    margin: 0 auto; /* Center the square horizontally */
+    margin-bottom: 10px; /* Adjust margin-bottom to reduce the white space */
+    margin-top: 50px; /* Adjust margin-top as needed */
+    position: relative;
+    padding: 20px; /* Adjust padding as needed */
+}
+
+#heart {
+    position: absolute; /* Position the image absolutely */
+    top: 10px; /* Adjust top distance from the top of the orange box */
+    right: 10px; /* Adjust right distance from the right of the orange box */
+    width: 100px;
+    height: 100px;
+}
+
+#text-inside-box {
+    color: white; /* Set text color to white */
+    font-size: 34px; /* Set font size to 24px or adjust as needed */
+    font-weight: bold;
+    position: absolute; /* Position the text absolutely */
+    top: 20px; /* Set top position */
+    left: 20px; /* Set left position */
+}
+
+#additional-text {
+    color: white; /* Set text color to white */
+    font-size: 18px; /* Set font size as needed */
+    position: absolute; /* Position the text absolutely */
+    bottom: 230px; /* Adjust the distance from the bottom */
+    left: 20px; /* Adjust the distance from the left */
+    height: 15px;
+}
+
+.search-section {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.search-bar {
+    flex: 1;
+    height: 40px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.search-bar:first-child {
+    color: #888; /* Grey text for placeholder */
+}
+
+.search-bar:nth-child(2),
+.search-bar:nth-child(3) {
+    position: relative;
+}
+
+.search-bar:nth-child(2)::after,
+.search-bar:nth-child(3)::after {
+    content: "▼"; /* Blue arrow pointing down */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: blue;
+    cursor: pointer;
+}
+
+.search-section {
+    background-color: transparent; /* Remove background color */
+    border: none; /* Remove border */
+    border-radius: 0; /* Remove border-radius */
+    padding: 0; /* Remove padding */
+}
+
+.search-button {
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+article {
+    width: calc(33.33% - 20px);
+    border-bottom: 1px solid #ccc;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    position: relative;
+    color: black;
+}
+
+.house-image {
+    width: 350px; /* Set the desired width */
+    height: 250px; /* Set the desired height */
+    object-fit: cover; /* Ensure the image covers the entire container */
+}
+
+.house-info {
+    padding: 1em;
+    text-align: left; /* Align text to the left */
+}
+
+.house-heading h2,
+.house-location p,
+.house-additional-information p {
+    margin: 0; /* Remove default margin */
+}
+
+.house-heading {
+    display: flex;
+    align-items: center;
+}
+
+.house-heading h2 {
+    margin-right: 0.5em; /* Adjust margin-right as needed */
+    white-space: nowrap; /* Prevent wrapping */
+}
+
+.house-location p {
+    margin-right: 0.5em; /* Adjust margin-right as needed */
+    white-space: nowrap; /* Prevent wrapping */
+}
+
+.house-location p {
+    margin-right: 1em;
+}
+
+.house-price {
+    font-weight: bold;
+}
+
+.house-additional-information {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Add space between elements */
+}
+
+.house-additional-information > div {
+    display: flex;
+    align-items: center;
+}
+
+#funda-image {
+    width: 100%;
+}
+
+section {
+    display: flex;
+    background-color: #e6f2f7;
+    height: 25em;
+}
+
+#m2, #bed {
+    width: 20px; /* Adjust width as needed */
+}
+
+
+.house-info {
+    padding: 0.1em 0.1em 0.1em 0.1em; /* Adjust the left padding as needed */
+}
+
+.house-info > * {
+    margin: 0; /* Remove default margin */
+}
+
+.house-heading h2,
+.house-location p,
+.house-additional-information p {
+    margin: 0; /* Remove default margin */
+}
+
